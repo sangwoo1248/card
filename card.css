@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background: #f4f4f4;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.image-grid img {
+    width: 80px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+/* 카드 배치칸 */
+.card-slot-zone {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-slot {
+    width: 90px;
+    height: 120px;
+    border: 2px dashed #999;
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.card-slot:hover {
+    background: #eee;
+}
+
+.card-slot img {
+    width: 80px;
+    height: auto;
+    margin: 0;
+}
+
+/* 카드 취소 버튼 */
+remove-button {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .remove-button:hover {
+    color: #e53e3e;
+  }
