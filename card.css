@@ -6,7 +6,7 @@ body {
 }
 
 /* 카드 */
-.image-grid {
+.card {
     display: flex;
     justify-content: center;
     gap: 10px;
