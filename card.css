@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 90px;  /* 최대 너비 제한 */
+    max-width: 90px;
   }
   
   .card-container img {
@@ -51,7 +51,7 @@ body {
     flex-wrap: nowrap;
     gap: 8px;
     overflow-x: auto;
-    margin-top: 20px;
+     margin-top: 20px;
     padding: 0 5px;
   }
   
