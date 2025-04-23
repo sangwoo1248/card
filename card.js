@@ -67,6 +67,7 @@ function returnToOriginal(containerId) {
   }
 }
 
+// 저장
 function saveCardPositions() {
   const slots = document.querySelectorAll('.card-slot');
   const positions = [];

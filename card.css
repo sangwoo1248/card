@@ -73,11 +73,13 @@ body {
     
 }
 
-.save-button-container {
+
+.save-btn{
     margin: 30px;
   }
   
-  .save-button-container button {
+
+.save-btn button {
     /*padding: 10px 20px;*/
     /*margin-bottom: 10px;*/
     font-size: 16px;
@@ -88,6 +90,6 @@ body {
     cursor: pointer;
   }
   
-  .save-button-container button:hover {
+  .save-btn button:hover {
     background-color: white;
   }
