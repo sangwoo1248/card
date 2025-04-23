@@ -4,10 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카드</title>
+    <link rel="stylesheet" href="card.css">
+    <!--<script src="card.js"></script>-->
 </head>
 <body>
 
-<h1>카드 사이트입니다</h1>
+<!--
+<div class="image-grid">
+    <img id="img1" src="card/001.png" alt="카드1" draggable="true">
+    <img id="img2" src="card/002.png" alt="카드2" draggable="true">
+    <img id="img3" src="card/003.png" alt="카드3" draggable="true">
+    <img id="img4" src="card/004.png" alt="카드4" draggable="true">
+    <img id="img5" src="card/005.png" alt="카드5" draggable="true">
+    <img id="img6" src="card/006.png" alt="카드6" draggable="true">
+    <img id="img7" src="card/007.png" alt="카드7" draggable="true">
+    <img id="img8" src="card/008.png" alt="카드8" draggable="true">
+    <img id="img9" src="card/009.png" alt="카드9" draggable="true">
+    <img id="img10" src="card/010.png" alt="카드10" draggable="true">
+    <img id="img11" src="card/011.png" alt="카드11" draggable="true">
+    <img id="img12" src="card/012.png" alt="카드12" draggable="true">
+</div> 
+-->
+
+<!-- 카드 -->
+<div class="card" id = "return">
+    <div class="card-container" id="slot-img1" draggable="true" ondragstart="drag(event)">
+        <img id="img1" src="card/001.png" alt="레드">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img1')">X</button>
+    </div>
+    <div class="card-container" id="slot-img2" draggable="true" ondragstart="drag(event)">
+        <img id="img2" src="card/002.png" alt="오렌지">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img2')">X</button>
+    </div>
+    <div class="card-container" id="slot-img3" draggable="true" ondragstart="drag(event)">
+        <img id="img3" src="card/003.png" alt="레드오렌지">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img3')">X</button>
+    </div>
+    <div class="card-container" id="slot-img4" draggable="true" ondragstart="drag(event)">
+        <img id="img4" src="card/004.png" alt="옐로우">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img4')">X</button>
+    </div>
+    <div class="card-container" id="slot-img5" draggable="true" ondragstart="drag(event)">
+        <img id="img5" src="card/005.png" alt="옐로우그린">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img5')">X</button>
+    </div>
+    <div class="card-container" id="slot-img6" draggable="true" ondragstart="drag(event)">
+        <img id="img6" src="card/006.png" alt="그린">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img6')">X</button>
+    </div>
+    <div class="card-container" id="slot-img7" draggable="true" ondragstart="drag(event)">
+        <img id="img7" src="card/007.png" alt="블루">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img7')">X</button>
+    </div>
+    <div class="card-container" id="slot-img8" draggable="true" ondragstart="drag(event)">
+        <img id="img8" src="card/008.png" alt="인디고">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img8')">X</button>
+    </div>
+    <div class="card-container" id="slot-img9" draggable="true" ondragstart="drag(event)">
+        <img id="img9" src="card/009.png" alt="퍼플">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img9')">X</button>
+    </div>
+    <div class="card-container" id="slot-img10" draggable="true" ondragstart="drag(event)">
+        <img id="img10" src="card/010.png" alt="마젠타">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img10')">X</button>
+    </div>
+    <div class="card-container" id="slot-img11" draggable="true" ondragstart="drag(event)">
+        <img id="img11" src="card/011.png" alt="블루그린">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img11')">X</button>
+    </div>
+    <div class="card-container" id="slot-img12" draggable="true" ondragstart="drag(event)">
+        <img id="img12" src="card/012.png" alt="TZ">
+        <button class="remove-btn" onclick="returnToOriginal('slot-img12')">X</button>
+    </div>
+</div>
+
+
+<!-- 슬롯 -->
+<div class="card-slot-zone">
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div class="card-slot" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+</div>
+
+<!--<embed src="https://twelvecard.netlify.app/dtwelvecard.html">-->
+
+<script src="card.js"></script>
 
 </body>
 </html>
