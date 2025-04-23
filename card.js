@@ -68,7 +68,7 @@ function returnToOriginal(containerId) {
 }
 
 // 저장
-function saveCardToSheet() {
+function saveCard() {
   const slots = document.querySelectorAll('.card-slot');
   const data = [];
 
@@ -81,21 +81,22 @@ function saveCardToSheet() {
     }
   });
 
-  fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx5aGa2kWRs1bV6h7u3S21guveH4geM6aP8-HRVAa7ue4KTFoemnzMqNy3VIJrBUGrm/exec/exec", 
-    {
+  fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx5aGa2kWRs1bV6h7u3S21guveH4geM6aP8-HRVAa7ue4KTFoemnzMqNy3VIJrBUGrm/exec/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json"
     }
   })
-  .then(response => response.text())
-  .then(result => {
-    alert("카드 배치가 Google 시트에 저장되었습니다!");
-    console.log(result);
+  .then(res => res.text())
+  .then(msg => {
+    //alert("✅ 카드 배치가 Google 시트에 저장되었습니다!");
+    console.log("✅ 시트 저장 결과:", msg);
   })
-  .catch(error => {
-    alert(" 저장 실패! ");
-    console.error(error);
+  .catch(err => {
+    //alert("❌ 저장 실패! 콘솔을 확인하세요.");
+    console.error(err);
   });
 }
+
+
