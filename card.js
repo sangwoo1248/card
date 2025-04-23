@@ -59,7 +59,7 @@ function drop(event) {
 // X버튼 클릭 시 원래 자리로 이동
 function returnToOriginal(containerId) {
   const cardContainer = document.getElementById(containerId);
-  const originalArea = document.getElementById("card-home");
+  const originalArea = document.getElementById("return");
   
   if (cardContainer) {
     originalArea.appendChild(cardContainer);
