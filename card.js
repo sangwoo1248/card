@@ -48,22 +48,21 @@ function drag(event) {
 // 슬롯에 저장
 function drop(event) {
   event.preventDefault();
-
   const containerId = event.dataTransfer.getData("text/plain");
   const cardContainer = document.getElementById(containerId);
-
-  if (cardContainer && !event.target.querySelector('.card-container')) {
-      event.target.appendChild(cardContainer);
+  
+  if (cardContainer && !event.target.querySelector(".card-container")) {
+    event.target.appendChild(cardContainer);
   }
 }
 
 // X버튼 클릭 시 원래 자리로 이동
 function returnToOriginal(containerId) {
   const cardContainer = document.getElementById(containerId);
-  const originalArea = document.getElementById("return");
-
+  const originalArea = document.getElementById("card-home");
+  
   if (cardContainer) {
-      originalArea.appendChild(cardContainer);
+    originalArea.appendChild(cardContainer);
   }
 }
 
@@ -99,4 +98,25 @@ function saveCard() {
   });
 }
 
+let touchedCardId = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card-container').forEach(container => {
+    container.addEventListener('touchstart', (e) => {
+      touchedCardId = container.id;
+    }, { passive: true });
+  });
+
+  document.querySelectorAll('.card-slot').forEach(slot => {
+    slot.addEventListener('touchend', (e) => {
+      if (touchedCardId) {
+        const card = document.getElementById(touchedCardId);
+        if (card && !slot.querySelector('.card-container')) {
+          slot.appendChild(card);
+        }
+        touchedCardId = null;
+      }
+    });
+  });
+});
 
