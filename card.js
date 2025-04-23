@@ -71,15 +71,14 @@ function saveCardPositions() {
   const slots = document.querySelectorAll('.card-slot');
   const positions = [];
 
-
   slots.forEach((slot, index) => {
     const card = slot.querySelector('img');
     if (card) {
       positions.push({ slot: index + 1, cardId: card.id });
-  } else {
-    positions.push({ slot: index + 1, cardId: null });
-  }
-});
+    } else {
+      positions.push({ slot: index + 1, cardId: null });
+    }
+  });
 
   console.log("📝 현재 카드 배치:", positions);
   alert("카드 배치가 저장되었습니다!\n콘솔에서 확인하세요.");
