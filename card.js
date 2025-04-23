@@ -68,19 +68,33 @@ function returnToOriginal(containerId) {
 }
 
 // 저장
-function saveCardPositions() {
+function saveCardToSheet() {
   const slots = document.querySelectorAll('.card-slot');
-  const positions = [];
+  const data = [];
 
   slots.forEach((slot, index) => {
     const card = slot.querySelector('img');
     if (card) {
-      positions.push({ slot: index + 1, cardId: card.id });
+      data.push({ slot: index + 1, cardName: card.alt });
     } else {
-      positions.push({ slot: index + 1, cardId: null });
+      data.push({ slot: index + 1, cardName: null });
     }
   });
 
-  console.log("📝 현재 카드 배치:", positions);
-  alert("카드 배치가 저장되었습니다!\n콘솔에서 확인하세요.");
+  fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx5aGa2kWRs1bV6h7u3S21guveH4geM6aP8-HRVAa7ue4KTFoemnzMqNy3VIJrBUGrm/exec/exec", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => response.text())
+  .then(result => {
+    alert("카드 배치가 Google 시트에 저장되었습니다!");
+    console.log(result);
+  })
+  .catch(error => {
+    alert(" 저장 실패! ");
+    console.error(error);
+  });
 }
