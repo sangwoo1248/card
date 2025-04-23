@@ -81,7 +81,8 @@ function saveCardToSheet() {
     }
   });
 
-  fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx5aGa2kWRs1bV6h7u3S21guveH4geM6aP8-HRVAa7ue4KTFoemnzMqNy3VIJrBUGrm/exec/exec", {
+  fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx5aGa2kWRs1bV6h7u3S21guveH4geM6aP8-HRVAa7ue4KTFoemnzMqNy3VIJrBUGrm/exec/exec", 
+    {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
