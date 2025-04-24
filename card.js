@@ -60,7 +60,7 @@ function saveCard() {
   });
 }
 
-/*let touchedCardId = null;
+let touchedCardId = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card-container').forEach(container => {
@@ -80,4 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-});*/
+});
